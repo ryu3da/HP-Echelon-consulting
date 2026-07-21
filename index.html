@@ -83,46 +83,6 @@
     .role-photo { position: relative; aspect-ratio: 4/5; overflow: hidden; }
     .role-photo-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(15%); }
 
-    .role-diagram {
-      margin-top: 56px;
-      display: grid;
-      grid-template-columns: 1fr 220px 1fr;
-      gap: 0;
-      background: white;
-      border: 1px solid var(--border);
-      padding: 52px 48px;
-      align-items: center;
-    }
-
-    /* Customer column */
-    .rd-customer { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-right: 20px; }
-    .rd-bubbles { display: flex; flex-direction: column; gap: 8px; width: 100%; }
-    .rd-bubble { border: 1px solid #d4d0cb; border-radius: 3px; padding: 9px 14px; font-size: 12px; font-weight: 300; color: var(--text-mid); line-height: 1.6; text-align: center; background: white; }
-    .rd-person { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 0; }
-    .rd-person-icon { width: 40px; height: 54px; }
-    .rd-person-label { font-size: 11px; font-weight: 400; color: var(--navy); letter-spacing: 0.06em; }
-    .rd-down-arrow { display: flex; justify-content: center; margin: 2px 0; }
-    .rd-result { background: var(--navy); color: white; padding: 14px 16px; font-size: 13px; font-weight: 500; text-align: center; line-height: 1.8; letter-spacing: 0.02em; width: 100%; }
-
-    /* Center column */
-    .rd-center { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 0 8px; }
-    .rd-arrow-row { display: flex; align-items: center; gap: 8px; }
-    .rd-arrow-row span { font-size: 12px; font-weight: 400; color: var(--navy); letter-spacing: 0.08em; white-space: nowrap; }
-    .rd-logo-box { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--border); padding: 14px 18px; width: 100%; justify-content: center; }
-    .rd-logo-name { display: flex; flex-direction: column; line-height: 1.1; }
-    .rd-logo-name .eln { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 500; letter-spacing: 0.12em; color: var(--navy); }
-    .rd-logo-name .cns { font-family: 'Cormorant Garamond', serif; font-size: 8px; font-weight: 400; letter-spacing: 0.18em; color: var(--navy); }
-
-    /* Right column */
-    .rd-right { display: flex; align-items: stretch; gap: 0; padding-left: 20px; }
-    .rd-branch { width: 44px; flex-shrink: 0; align-self: stretch; min-height: 180px; }
-    .rd-branch svg { display: block; width: 44px; height: 100%; min-height: 180px; }
-    .rd-institutions { flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: center; }
-    .rd-inst-group {}
-    .rd-inst-title { background: var(--navy); color: white; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; padding: 8px 14px; margin-bottom: 10px; }
-    .rd-inst-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .rd-inst-tags span { background: #f0ede8; border: 1px solid var(--border); font-size: 11px; font-weight: 300; color: var(--text-mid); padding: 5px 12px; letter-spacing: 0.04em; }
-
     /* COMPARE DIAGRAM (従来 vs Echelon) */
     .compare-heading { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 400; color: var(--navy); letter-spacing: 0.04em; margin-top: 80px; margin-bottom: 28px; text-align: center; }
     .compare-diagram { display: grid; grid-template-columns: 1fr 64px 1fr; align-items: center; }
@@ -270,9 +230,6 @@
       .services-panel.active { grid-template-columns: 1fr; }
       .service-intro { grid-column: 1; }
       .panel-intro-grid, .role-intro-grid { grid-template-columns: 1fr; }
-      .role-diagram { grid-template-columns: 1fr; gap: 32px; padding: 40px 32px; }
-      .rd-customer { padding-right: 0; }
-      .rd-right { padding-left: 0; justify-content: center; }
       .compare-diagram { grid-template-columns: 1fr; }
       .compare-arrow { transform: rotate(90deg); padding: 12px 0; }
     }
@@ -315,7 +272,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="./logo.jpg" alt="ECHELON CONSULTING" class="nav-logo-img">
+    <img src="images/logo.jpg" alt="ECHELON CONSULTING" class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="#mission">理念</a></li>
@@ -332,7 +289,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-photo fade-up">
-    <img src="./world.jpg" alt="世界の金融マーケットを見渡すビル群" class="hero-photo-img">
+    <img src="images/world.jpg" alt="世界の金融マーケットを見渡すビル群" class="hero-photo-img">
   </div>
   <div class="hero-inner">
     <p class="hero-label fade-up">Independent Financial Advisory</p>
@@ -382,7 +339,7 @@
       </p>
     </div>
     <div class="mission-photo fade-up fade-up-delay-1">
-      <img src=".//up.jpg" alt="次の階層を見上げるビル群" class="mission-photo-img">
+      <img src="images/up.jpg" alt="次の階層を見上げるビル群" class="mission-photo-img">
     </div>
     <div class="mission-pillars">
       <div class="mission-pillar fade-up fade-up-delay-1">
@@ -417,101 +374,8 @@
         そして、お客様と専門家の橋渡し役として、金融機関・コンサルタント双方のネットワークを活かし、最適な解決策をワンストップでご提案します。
       </p>
       <div class="role-photo">
-        <img src="./adviser.jpg" alt="ワンストップアドバイザーのイメージ" class="role-photo-img">
+        <img src="images/adviser.jpg" alt="ワンストップアドバイザーのイメージ" class="role-photo-img">
       </div>
-    </div>
-
-    <!-- Role Diagram -->
-    <div class="role-diagram fade-up fade-up-delay-3">
-
-      <!-- Left: Customer -->
-      <div class="rd-customer">
-        <div class="rd-bubbles">
-          <div class="rd-bubble">お金の悩みの<br>相談相手がわからない</div>
-          <div class="rd-bubble">誰のアドバイスが<br>正しいかわからない</div>
-          <div class="rd-bubble">何から取り組むべきか<br>わからない</div>
-        </div>
-        <div class="rd-person">
-          <svg class="rd-person-icon" viewBox="0 0 48 64">
-            <circle cx="24" cy="13" r="10" fill="#1a2456"/>
-            <path d="M4 60 Q4 34 24 34 Q44 34 44 60Z" fill="#1a2456"/>
-          </svg>
-          <p class="rd-person-label">個人のお客様</p>
-        </div>
-        <div class="rd-down-arrow">
-          <svg width="14" height="22" viewBox="0 0 14 22">
-            <line x1="7" y1="0" x2="7" y2="17" stroke="#1a2456" stroke-width="1.5"/>
-            <polygon points="1,13 7,22 13,13" fill="#1a2456"/>
-          </svg>
-        </div>
-        <div class="rd-result">ワンストップで相談に乗れる<br>アドバイザーが必要</div>
-      </div>
-
-      <!-- Center: Arrows + Logo -->
-      <div class="rd-center">
-        <div class="rd-arrow-row">
-          <span>相談</span>
-          <svg width="72" height="14" viewBox="0 0 72 14">
-            <line x1="0" y1="7" x2="64" y2="7" stroke="#1a2456" stroke-width="1.5"/>
-            <polygon points="56,2 72,7 56,12" fill="#1a2456"/>
-          </svg>
-        </div>
-        <div class="rd-logo-box">
-          <svg width="24" height="18" viewBox="0 0 36 28" fill="none">
-            <rect y="0" width="36" height="7" fill="#1a2456"/>
-            <rect x="6" y="10.5" width="30" height="7" fill="#1a2456"/>
-            <rect x="12" y="21" width="24" height="7" fill="#1a2456"/>
-          </svg>
-          <div class="rd-logo-name">
-            <span class="eln">ECHELON</span>
-            <span class="cns">CONSULTING</span>
-          </div>
-        </div>
-        <div class="rd-arrow-row">
-          <svg width="72" height="14" viewBox="0 0 72 14">
-            <line x1="8" y1="7" x2="72" y2="7" stroke="#1a2456" stroke-width="1.5"/>
-            <polygon points="16,2 0,7 16,12" fill="#1a2456"/>
-          </svg>
-          <span>提案</span>
-        </div>
-      </div>
-
-      <!-- Right: Branch + Institutions -->
-      <div class="rd-right">
-        <!-- Fork connector SVG -->
-        <div class="rd-branch">
-          <svg viewBox="0 0 44 220" preserveAspectRatio="none">
-            <!-- horizontal from echelon -->
-            <line x1="0" y1="110" x2="18" y2="110" stroke="#1a2456" stroke-width="1.5"/>
-            <!-- vertical trunk -->
-            <line x1="18" y1="38" x2="18" y2="182" stroke="#1a2456" stroke-width="1.5"/>
-            <!-- upper branch -->
-            <line x1="18" y1="38" x2="40" y2="38" stroke="#1a2456" stroke-width="1.5"/>
-            <polygon points="33,33 44,38 33,43" fill="#1a2456"/>
-            <!-- lower branch -->
-            <line x1="18" y1="182" x2="40" y2="182" stroke="#1a2456" stroke-width="1.5"/>
-            <polygon points="33,177 44,182 33,187" fill="#1a2456"/>
-          </svg>
-        </div>
-        <!-- Institution groups -->
-        <div class="rd-institutions">
-          <div class="rd-inst-group">
-            <div class="rd-inst-title">金融機関サイド</div>
-            <div class="rd-inst-tags">
-              <span>銀行</span><span>不動産会社</span><span>IFA</span>
-              <span>証券会社</span><span>保険会社</span>
-            </div>
-          </div>
-          <div class="rd-inst-group">
-            <div class="rd-inst-title">コンサルタントサイド</div>
-            <div class="rd-inst-tags">
-              <span>弁護士</span><span>相続診断士</span><span>税理士</span>
-              <span>ファイナンシャルプランナー</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <!-- Compare Diagram: 従来の形 vs Echelon -->
@@ -552,7 +416,7 @@
     <h2 class="section-title fade-up fade-up-delay-1">財務と資産の課題を、<br><strong>チームで解決する。</strong></h2>
     <div class="divider fade-up fade-up-delay-1"></div>
     <div class="services-photo fade-up fade-up-delay-2">
-      <img src="./team.jpg" alt="チームで課題解決に取り組む専門家" class="services-photo-img">
+      <img src="images/team.jpg" alt="チームで課題解決に取り組む専門家" class="services-photo-img">
     </div>
     <div class="services-tabs fade-up fade-up-delay-2">
       <div class="services-tab active" onclick="switchTab(0)">個人・富裕層向けコンサルティング</div>
@@ -565,7 +429,7 @@
           <p class="service-intro-text">あなたの人生設計から、資産運用の戦略を。収入・支出・将来の夢——まず「どう生きたいか」を一緒に整理します。その上で、国内外の金融商品の情報提供や資産形成の選択肢をわかりやすくお伝えし、あなた自身が最適な判断を下せるようサポートします。</p>
         </div>
         <div class="panel-photo fade-up fade-up-delay-1">
-          <img src="./famiry.jpg" alt="個人・富裕層向けコンサルティングのイメージ" class="panel-photo-img">
+          <img src="images/famiry.jpg" alt="個人・富裕層向けコンサルティングのイメージ" class="panel-photo-img">
         </div>
       </div>
       <div class="service-items">
@@ -582,7 +446,7 @@
           <p class="service-intro-text">会社のお金を、経営者の資産へ。財務の現状把握から改善立案、日々の記帳代行まで一貫して対応。さらに、社員の資産形成教育・営業外収益の構築・M&A後の資産運用プランニングまで、「法人のお金」と「個人の資産」を繋ぐトータルサポートを提供します。</p>
         </div>
         <div class="panel-photo fade-up fade-up-delay-1">
-          <img src="./bujiness.jpg" alt="法人向けコンサルティングのイメージ" class="panel-photo-img">
+          <img src="images/bujiness.jpg" alt="法人向けコンサルティングのイメージ" class="panel-photo-img">
         </div>
       </div>
       <div class="service-items">
@@ -612,9 +476,9 @@
     <h2 class="section-title fade-up fade-up-delay-1">攻めの経営、<strong>守りの財務。</strong></h2>
     <div class="divider fade-up fade-up-delay-1"></div>
     <div class="approach-grid">
-      <div class="approach-card fade-up"><div class="approach-card-photo"><img src="./riseach.jpg" alt="現状の可視化のイメージ"></div><div class="approach-card-num">01</div><div class="approach-card-title">現状の可視化</div><div class="approach-card-text">財務状況・キャッシュフロー・資産構成を整理し、経営者が把握すべき数字をすべて可視化。「知らなかった」リスクを排除します。</div></div>
-      <div class="approach-card fade-up fade-up-delay-1"><div class="approach-card-photo"><img src="./make.jpg" alt="戦略の設計のイメージ"></div><div class="approach-card-num">02</div><div class="approach-card-title">戦略の設計</div><div class="approach-card-text">目標・時間軸・リスク許容度に合わせて、最適な財務・資産戦略を設計。商品ありきではなく、課題解決から逆算して提案します。</div></div>
-      <div class="approach-card fade-up fade-up-delay-2"><div class="approach-card-photo"><img src="./conect.jpg" alt="専門家との連携のイメージ"></div><div class="approach-card-num">03</div><div class="approach-card-title">専門家との連携</div><div class="approach-card-text">税理士・弁護士・プライベートバンクなど各分野のプロフェッショナルと連携。複雑な課題をワンストップで対処します。</div></div>
+      <div class="approach-card fade-up"><div class="approach-card-photo"><img src="images/riseach.jpg" alt="現状の可視化のイメージ"></div><div class="approach-card-num">01</div><div class="approach-card-title">現状の可視化</div><div class="approach-card-text">財務状況・キャッシュフロー・資産構成を整理し、経営者が把握すべき数字をすべて可視化。「知らなかった」リスクを排除します。</div></div>
+      <div class="approach-card fade-up fade-up-delay-1"><div class="approach-card-photo"><img src="images/make.jpg" alt="戦略の設計のイメージ"></div><div class="approach-card-num">02</div><div class="approach-card-title">戦略の設計</div><div class="approach-card-text">目標・時間軸・リスク許容度に合わせて、最適な財務・資産戦略を設計。商品ありきではなく、課題解決から逆算して提案します。</div></div>
+      <div class="approach-card fade-up fade-up-delay-2"><div class="approach-card-photo"><img src="images/conect.jpg" alt="専門家との連携のイメージ"></div><div class="approach-card-num">03</div><div class="approach-card-title">専門家との連携</div><div class="approach-card-text">税理士・弁護士・プライベートバンクなど各分野のプロフェッショナルと連携。複雑な課題をワンストップで対処します。</div></div>
     </div>
   </div>
 </section>
@@ -630,12 +494,12 @@
       数字を通じて経営の意思決定を体感し、財務リテラシーを実践的に高めるセミナーです。
     </p>
     <div class="mg-gallery fade-up fade-up-delay-3">
-      <img src="./mg-scene1.jpg" alt="戦略MGセミナーの様子1">
-      <img src="./mg-scene2.jpg" alt="戦略MGセミナーの様子2">
-      <img src="./mg-scene3.jpg" alt="戦略MGセミナーの様子3">
+      <img src="images/mg-scene1.jpg" alt="戦略MGセミナーの様子1">
+      <img src="images/mg-scene2.jpg" alt="戦略MGセミナーの様子2">
+      <img src="images/mg-scene3.jpg" alt="戦略MGセミナーの様子3">
     </div>
     <a href="https://echelon-consulting-mg.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-banner fade-up fade-up-delay-4">
-      <img src="./mg-guide.jpg" alt="戦略MGセミナーの詳細を見る" class="cta-banner-img">
+      <img src="images/mg-guide.jpg" alt="戦略MGセミナーの詳細を見る" class="cta-banner-img">
       <span class="cta-banner-label">
         セミナーの詳細を見る
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -655,7 +519,7 @@
       ご登録いただくと、個別相談のご予約も簡単に行えます。
     </p>
     <a href="https://line.me/R/ti/p/%40vff3829m" target="_blank" rel="noopener noreferrer" class="cta-banner fade-up fade-up-delay-3">
-      <img src="./line-Echlon.jpg" alt="ECHELON CONSULTING 公式LINE" class="cta-banner-img">
+      <img src="images/line-Echlon.jpg" alt="ECHELON CONSULTING 公式LINE" class="cta-banner-img">
       <span class="cta-banner-label">
         公式LINEを見る
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -669,7 +533,7 @@
   <div class="section-inner">
     <div class="rep-photo fade-up">
       <div class="rep-photo-frame">
-        <img src="./iida.jpg" alt="代表取締役 飯田進之介" class="rep-photo-img">
+        <img src="images/iida.jpg" alt="代表取締役 飯田進之介" class="rep-photo-img">
       </div>
       <div class="rep-photo-caption">IIDA SHINNOSUKE — Representative Director</div>
     </div>
@@ -748,7 +612,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="./logo.jpg" alt="ECHELON CONSULTING" class="footer-logo-img">
+      <img src="images/logo.jpg" alt="ECHELON CONSULTING" class="footer-logo-img">
     </div>
     <div class="footer-meta">
       <div class="footer-address">〒108-0074 東京都港区高輪四丁目23-6 ハイホーム高輪708<br>support@echelon-consulting.co.jp</div>
